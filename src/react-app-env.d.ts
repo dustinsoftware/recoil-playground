@@ -1,7 +1,7 @@
 /// <reference types="react-scripts" />
 declare module 'recoil' {
-  export type Atom = { _thisIsAnAtom: string };
-  export type Selector = { _thisIsASelector: string };
+  export type Atom = { tag: 'Writable' };
+  export type Selector = { tag: 'Readonly' };
 
   export const RecoilRoot: any;
   export function atom<T>(shape: { key: string; default?: string }): Atom;
