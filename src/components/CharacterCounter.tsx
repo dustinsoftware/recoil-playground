@@ -4,5 +4,5 @@ import { charCountState } from './atoms';
 
 export default function CharacterCounter() {
   let count = useRecoilValue<string>(charCountState);
-  return <>Character count: {count}</>;
+  return <div data-testid="character-count">Character count: {count}</div>;
 }
