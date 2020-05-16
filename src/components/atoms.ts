@@ -1,6 +1,6 @@
 import { atom, selector } from 'recoil';
 
-export const charCountState = selector({
+export const charCountState = selector<string>({
   key: 'charCountState',
   get: ({ get }) => {
     const text = get(textState);
@@ -8,7 +8,7 @@ export const charCountState = selector({
   }
 });
 
-export const textState = atom({
+export const textState = atom<string>({
   key: 'textState',
   default: ''
 });
