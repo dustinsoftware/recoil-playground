@@ -19,15 +19,3 @@ test('renders the app', () => {
   const linkElement = getByText(/Recoil Playground/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-test('count renders', () => {
-  const { getByTestId } = render(<App />);
-  const inputField = getByTestId('text-input');
-  fireEvent.input(inputField, { target: { value: '123' } });
-
-  const textRender = getByTestId('text-render');
-  expect(textRender).toHaveTextContent('Text: 123');
-
-  const characterCount = getByTestId('character-count');
-  expect(characterCount).toHaveTextContent('Character count: 3');
-});

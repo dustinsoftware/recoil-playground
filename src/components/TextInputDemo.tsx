@@ -1,6 +1,7 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
-import TodoList from './components/TodoList';
+import TextInput from './TextInput';
+import CharacterCounter from './CharacterCounter';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <div className="w-full">
         Recoil Playground
         <RecoilRoot>
-          <TodoList></TodoList>
+          <TextInput />
+          <CharacterCounter />
         </RecoilRoot>
       </div>
     </div>
